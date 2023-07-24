@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import axios from "axios";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // Use the PORT provided by Heroku or default to 3000 for local development
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
